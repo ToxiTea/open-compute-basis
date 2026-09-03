@@ -89,14 +89,21 @@ def render_html(bundle: dict[str, Any]) -> str:
 </head>
 <body>
   <h1>Open Compute Basis</h1>
-  <p>Experimental information service. Not financial advice, not an oracle, not a peg,
-  and not an official FLOP Labs product. Methodology {html.escape(str(bundle.get('methodology_version')))}.</p>
+  <p>What does comparable GPU compute cost in dollars, and how would a FLOP session compare?
+  This board keeps those markets <em>separate</em>. It is not an oracle, peg, or official FLOP product.
+  Methodology {html.escape(str(bundle.get('methodology_version')))}.</p>
   <p class="muted">Observation {html.escape(str(bundle.get('observation_time')))} ·
-  print hash <code>{html.escape(str(bundle.get('print_hash') or ''))}</code></p>
+  print hash <code>{html.escape(str(bundle.get('print_hash') or ''))}</code> ·
+  <a href="https://github.com/ToxiTea/open-compute-basis">repository</a></p>
+  <p>Read top to bottom: public list prices, a manual outside comparison, prediction-market ladders,
+  then FLOP (empty until an official session API exists).
+  <code>OBSERVATION</code> means one licensed feed — useful, not a canonical index.
+  <code>NO_PRINT</code> means coverage failed; we do not invent or carry a stale number.
+  Garage RTX series stay blank until a licensed community feed exists. Internet Backyard is shown beside OCB, never inside it.</p>
 
   <div class="panel">
     <h2>Spot / list observations</h2>
-    <p>List prices only. One-source results are observations, not a high-confidence canonical print.</p>
+    <p>Public asking prices in USD per physical GPU-hour. Value is the median of per-provider medians so one listing mill cannot dominate. IQR is the 25th–75th percentile of those provider medians.</p>
     <table>
       <thead><tr>
         <th>Series</th><th>Status</th><th>Median of provider medians</th>
@@ -108,26 +115,25 @@ def render_html(bundle: dict[str, Any]) -> str:
 
   <div class="panel">
     <h2>Internet Backyard comparison — manually captured</h2>
-    <p>Not an OCB constituent. Never substituted for automated inputs.</p>
+    <p>Human-captured print from internetbackyard.com/compute-index. Comparison only. We do not scrape the site. The 68 vs 79 listing-count mismatch is preserved on purpose.</p>
     <ul>{''.join(ib_rows) or '<li>No manual records.</li>'}</ul>
   </div>
 
   <div class="panel">
     <h2>Forward-market observations (Kalshi)</h2>
-    <p>Strike ladders and market-implied median strikes. Not a forward price.</p>
+    <p>Binary compute contracts discovered on Kalshi’s public API. The implied median strike is the first strike whose midpoint probability falls to 50%. That is a ladder summary, not a forward curve we would trade or call a price.</p>
     <ul>{''.join(ladders) or '<li>No discovered compute markets in this run.</li>'}</ul>
   </div>
 
   <div class="panel">
-    <h2>FLOP testnet participation and session basis — awaiting official software/API</h2>
-    <p>Status: <code>{html.escape(str(flop.get('FLOP_STATUS') or 'AWAITING_OFFICIAL_SESSION_API'))}</code></p>
-    <p>Transaction-index panel: none in v0.1 (no licensed transaction feed enabled).</p>
+    <h2>FLOP session basis — awaiting official software/API</h2>
+    <p>Status: <code>{html.escape(str(flop.get('FLOP_STATUS') or 'AWAITING_OFFICIAL_SESSION_API'))}</code>.
+    No session prices are invented from Technocore chat. Transaction-index panel: none (no licensed clearing feed enabled).</p>
   </div>
 
   <div class="panel">
     <h2>Simulated inference-evaluation report</h2>
-    <p>This is the workload OCB will run when an official faucet exists.
-    Simulated activity does not earn tokens.</p>
+    <p>The fixed job OCB will run on an official testnet: extract GPU fields from a licensed excerpt and score against gold labels. Labeled SIMULATED. It does not earn tokens and does not write the table above.</p>
     <pre>{html.escape(_pretty(part))}</pre>
   </div>
 
