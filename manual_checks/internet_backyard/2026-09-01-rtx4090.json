@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "source": "internet_backyard_manual",
+  "source_url": "https://www.internetbackyard.com/compute-index",
+  "source_as_of_date": "2026-09-01",
+  "captured_at": null,
+  "evidence_reference": "User-supplied screenshot in Codex conversation; exact capture time unavailable",
+  "gpu": "RTX4090",
+  "form_factor": "PCIE",
+  "pricing_type": "ON_DEMAND",
+  "currency": "USD",
+  "unit": "GPU_HOUR",
+  "headline": {
+    "usd_per_gpu_hour": 0.79,
+    "provider_count": 3,
+    "listing_count": 68
+  },
+  "providers": [
+    {
+      "name": "Vast.ai",
+      "median_usd_per_gpu_hour": 0.68,
+      "middle_50_low": 0.37,
+      "middle_50_high": 0.80,
+      "displayed_count": 58
+    },
+    {
+      "name": "RunPod",
+      "median_usd_per_gpu_hour": 0.83,
+      "middle_50_low": 0.58,
+      "middle_50_high": 1.30,
+      "displayed_count": 14
+    },
+    {
+      "name": "Shadeform",
+      "median_usd_per_gpu_hour": 1.17,
+      "middle_50_low": 0.95,
+      "middle_50_high": 1.19,
+      "displayed_count": 7
+    }
+  ],
+  "provider_displayed_count_total": 79,
+  "quality_flags": [
+    "MANUAL",
+    "COMPARISON_ONLY",
+    "COUNT_MISMATCH",
+    "CAPTURE_TIME_UNKNOWN"
+  ],
+  "methodology_version": "external-unknown",
+  "constituent_of_ocb": false,
+  "notes": "Provider displayed counts total 79 while the page headline displays 68 listings. Both values are retained without attempting to reconcile them."
+}

@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "gpu": "H100",
+      "latest": {
+        "accelerator": "H100",
+        "value": 3.46,
+        "unit": "USD_PER_GPU_HOUR",
+        "observed_at": "2026-09-02T07:00:00Z"
+      }
+    }
+  ]
+}

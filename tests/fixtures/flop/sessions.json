@@ -1,0 +1,22 @@
+{
+  "sessions": [
+    {
+      "session_id": "sim-session-1",
+      "state": "completed",
+      "challenged": false,
+      "fee_flop": "2.5",
+      "compute_flops": "5e18",
+      "model_hash": "abc123",
+      "latency_ms": 800,
+      "quality_flags": ["SIMULATED"]
+    },
+    {
+      "session_id": "sim-session-2",
+      "state": "completed",
+      "challenged": true,
+      "fee_flop": "9.0",
+      "compute_flops": "1e18",
+      "quality_flags": ["SIMULATED"]
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "dataset": "gpu-cloud-price-index",
+  "title": "GPU Cloud Price Index",
+  "source": "gpucloudcompare.com",
+  "license": "CC-BY-4.0",
+  "attribution": "Data: gpucloudcompare.com (CC-BY-4.0)",
+  "currency": "USD",
+  "captured_at": "2026-09-02",
+  "generated_at": "2026-09-02T03:30:02Z",
+  "provider_count": 6,
+  "plans": [
+    {
+      "provider": "DigitalOcean",
+      "plan_id": "gpu-h100x1-80gb",
+      "price_hourly_usd": 4.41,
+      "locations": ["Amsterdam", "New York", "Toronto"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H100",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "DigitalOcean",
+      "plan_id": "gpu-h100x8-640gb",
+      "price_hourly_usd": 35.28,
+      "locations": ["New York"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H100",
+      "gpu_count": 8,
+      "type": "gpu"
+    },
+    {
+      "provider": "DigitalOcean",
+      "plan_id": "gpu-h200x1-141gb",
+      "price_hourly_usd": 4.47,
+      "locations": ["Atlanta", "New York"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H200",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "Latitude",
+      "plan_id": "nvidia-h100-80gb",
+      "price_hourly_usd": 3.37,
+      "locations": ["Global"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "NVIDIA H100 80GB",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "Atlantic.Net",
+      "plan_id": "AH100NVL.240GB",
+      "price_hourly_usd": 3.941,
+      "locations": ["Orlando", "Dallas", "New York"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H100NVL",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "Vultr",
+      "plan_id": "h100-sxm5-1",
+      "price_hourly_usd": 24.34,
+      "locations": ["Global"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "NVIDIA H100 SXM5",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "UpCloud",
+      "plan_id": "GPU-12xCPU-240GB-1xH100",
+      "price_hourly_usd": 3.20,
+      "locations": ["us-nyc1", "de-fra1"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H100 80GB HBM3",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "Scaleway",
+      "plan_id": "h100-pcie-1",
+      "price_hourly_usd": 2.90,
+      "locations": ["Paris"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H100 PCIe",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "OVHcloud",
+      "plan_id": "h100-1520.consumption",
+      "price_hourly_usd": null,
+      "locations": ["Gravelines"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H100",
+      "gpu_count": 8,
+      "type": "gpu"
+    },
+    {
+      "provider": "DigitalOcean",
+      "plan_id": "gpu-b300x1-288gb-spot",
+      "price_hourly_usd": 11.19,
+      "locations": ["Global"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "B200",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "Linode / Akamai",
+      "plan_id": "b200-1",
+      "price_hourly_usd": 6.50,
+      "locations": ["us-east"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "B200",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "Vultr",
+      "plan_id": "b200-1",
+      "price_hourly_usd": 7.10,
+      "locations": ["Global"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "B200",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "Hetzner",
+      "plan_id": "b200-1",
+      "price_hourly_usd": 5.90,
+      "locations": ["Falkenstein"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "B200",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "OVHcloud",
+      "plan_id": "a100-1",
+      "price_hourly_usd": 1.80,
+      "locations": ["Gravelines"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "A100",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "Vultr",
+      "plan_id": "a100-sxm-1",
+      "price_hourly_usd": 2.10,
+      "locations": ["Global"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "A100 SXM",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "DigitalOcean",
+      "plan_id": "gpu-a100x1",
+      "price_hourly_usd": 1.99,
+      "locations": ["New York"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "A100",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "DigitalOcean",
+      "plan_id": "gpu-h100x1-80gb-duplicate",
+      "price_hourly_usd": 4.41,
+      "locations": ["Toronto"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H100",
+      "gpu_count": 1,
+      "type": "gpu"
+    },
+    {
+      "provider": "SpamCloud",
+      "plan_id": "outlier-h100",
+      "price_hourly_usd": 400.0,
+      "locations": ["Global"],
+      "captured_at": "2026-09-02",
+      "gpu_model": "H100",
+      "gpu_count": 1,
+      "type": "gpu"
+    }
+  ]
+}

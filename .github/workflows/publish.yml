@@ -1,0 +1,30 @@
+name: collect
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      TECHNOCORE_PUBLISH: "false"
+      FLOP_PARTICIPATION: "false"
+      ENABLE_NONCOMMERCIAL_SOURCE: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: pytest
+      - name: live collect
+        run: ocb run --live
+      - name: publish pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+        if: success()
+      # TECHNOCORE_AGENT_SEED may be configured later. Publishing stays off
+      # until TECHNOCORE_PUBLISH=true is set by a human after Gate 0–5.

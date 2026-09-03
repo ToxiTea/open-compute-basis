@@ -1,0 +1,19 @@
+{
+  "document": "Provider: ExampleCloud. GPU: NVIDIA H100 SXM. Region: us-east. Service: managed cloud on-demand. Commitment: none. Availability: in stock. Price: $4.41 per GPU-hour.",
+  "predicted": {
+    "gpu_sku": "H100 SXM",
+    "region": "us-east",
+    "service_class": "managed cloud",
+    "commitment": "none",
+    "availability": "in stock",
+    "usd_per_gpu_hour": 4.41
+  },
+  "gold": {
+    "gpu_sku": "H100 SXM",
+    "region": "us-east",
+    "service_class": "managed cloud",
+    "commitment": "none",
+    "availability": "in stock",
+    "usd_per_gpu_hour": 4.41
+  }
+}

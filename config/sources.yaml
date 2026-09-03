@@ -1,0 +1,143 @@
+# Source roles: constituent | comparison | forward | flop | disabled
+# Only approved constituent feeds (Tier A/B) calculate canonical OCB series.
+
+gpucloudcompare:
+  role: constituent
+  enabled: true
+  tier: B
+  license: "CC-BY-4.0"
+  attribution: "Source: GPU Cloud Price Index — gpucloudcompare.com (CC-BY 4.0)"
+  commercial_use: permitted_with_attribution
+  automated_republication: permitted_with_attribution
+  endpoint: "https://gpucloudcompare.com/data/current.json"
+  update_frequency: daily
+  authentication: none
+  adapter: gpucloudcompare
+
+kalshi:
+  role: forward
+  enabled: true
+  tier: A
+  license: "Kalshi public market data terms; read-only unauthenticated API"
+  attribution: "Forward observations: Kalshi public Trade API (external-api.kalshi.com)"
+  commercial_use: review_terms
+  automated_republication: limited_to_derived_observations
+  endpoint: "https://external-api.kalshi.com/trade-api/v2"
+  update_frequency: live
+  authentication: none
+  adapter: kalshi
+  discover:
+    series_keywords:
+      - h100
+      - h200
+      - b200
+      - a100
+      - rtx 5090
+      - gpu
+      - compute
+    categories:
+      - Commodities
+    path_hints:
+      - "/category/commodities/compute"
+
+computable:
+  role: comparison
+  enabled: false  # CC BY-NC 4.0; enable only when ENABLE_NONCOMMERCIAL_SOURCE=true
+  requires_flag: ENABLE_NONCOMMERCIAL_SOURCE
+  tier: B
+  license: "CC-BY-NC-4.0"
+  attribution: "Comparison: Computable GPU Index (CC BY-NC 4.0) — not a commercial OCB constituent"
+  commercial_use: not_permitted
+  automated_republication: not_for_commercial_use
+  endpoint: "https://api.getcomputable.com/v1/index/{gpu}/latest"
+  gpus: [H100, H200, B200, B300]
+  update_frequency: scheduled
+  authentication: none
+  adapter: computable
+
+internet_backyard_manual:
+  role: comparison
+  enabled: true
+  tier: D
+  license: "No documented public API or reuse license; human-viewable page only"
+  attribution: "Internet Backyard comparison — manually captured; not an OCB constituent"
+  commercial_use: unknown
+  automated_republication: forbidden_until_permission
+  endpoint: "https://www.internetbackyard.com/compute-index"
+  update_frequency: human
+  authentication: none
+  adapter: internet_backyard_manual
+  scrape: false
+  records_dir: "manual_checks/internet_backyard"
+
+flop_pending:
+  role: flop
+  enabled: true
+  tier: A
+  license: "n/a — no public session API"
+  attribution: "FLOP session basis awaiting official software/API"
+  commercial_use: n/a
+  automated_republication: n/a
+  endpoint: null
+  update_frequency: none
+  authentication: none
+  adapter: flop_pending
+
+flop_testnet:
+  role: flop
+  enabled: false
+  tier: A
+  license: "official FLOP testnet terms when published"
+  attribution: "FLOP official session receipts when available"
+  commercial_use: n/a
+  automated_republication: n/a
+  endpoint: null
+  update_frequency: none
+  authentication: official_when_published
+  adapter: flop_testnet
+
+injective:
+  role: forward
+  enabled: false
+  tier: C
+  license: "terms review required"
+  attribution: "Injective/Helix H100/USDT perpetual — derivative/oracle observation, not physical delivery"
+  commercial_use: review_terms
+  automated_republication: disabled_pending_audit
+  endpoint: null
+  update_frequency: live
+  authentication: none
+  adapter: injective
+
+opencomputeprices:
+  role: disabled
+  enabled: false
+  tier: C
+  license: "verify upstream source terms before any use"
+  attribution: null
+  commercial_use: unknown
+  automated_republication: forbidden_until_audit
+  endpoint: "https://github.com/thatkavish/OpenComputePrices"
+  adapter: null
+
+ornn:
+  role: disabled
+  enabled: false
+  tier: D
+  license: "do not assume free viewing permits republication"
+  attribution: null
+  commercial_use: unknown
+  automated_republication: forbidden_until_audit
+  endpoint: "https://data.ornn.com/markets"
+  adapter: null
+
+silicon_data:
+  role: disabled
+  enabled: false
+  tier: D
+  license: "paid product for full history/API"
+  attribution: null
+  commercial_use: paid
+  automated_republication: forbidden
+  endpoint: null
+  adapter: null

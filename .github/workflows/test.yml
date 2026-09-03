@@ -1,0 +1,22 @@
+name: test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: pytest
+      - name: secret scan of tracked files
+        run: |
+          if git grep -I -E '[0-9a-fA-F]{64}' -- ':!.github' ':!tests' ':!docs' ':!*.md'; then
+            echo "possible seed-shaped hex in tracked files" >&2
+            exit 1
+          fi
+          echo "no 64-hex blobs in unexpected tracked files"

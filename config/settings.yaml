@@ -1,0 +1,50 @@
+methodology_version: "0.1.0"
+project_name: "Open Compute Basis"
+project_short: "OCB"
+canonical_url: "https://github.com/ToxiTea/open-compute-basis"
+disclaimer: >-
+  Experimental information service. Not financial advice, not an oracle,
+  not a peg, and not an official FLOP Labs product.
+
+http:
+  timeout_seconds: 20
+  retries: 3
+  retry_backoff_seconds: 1.5
+  rate_limit_per_second: 2.0
+  user_agent: "open-compute-basis/0.1 (+https://github.com/open-compute-basis; research; read-only)"
+
+freshness:
+  max_age_hours: 36
+  fail_closed: true
+
+benchmark:
+  high_confidence_min_providers: 3
+  high_confidence_min_source_feeds: 2
+  min_observation_providers: 1
+  outlier_iqr_k: 8.0
+  materiality_pct: 5.0
+
+technocore:
+  publish: false
+  base_url: "https://technocore.chat"
+  production_room: "d-open-compute-basis"
+  fallback_room: "d-ocb-prices"
+  max_digests_per_utc_day: 1
+  continuity_min_days: 5
+  # Seeds are never accepted as --seed in documented CLI usage.
+  agent_seed_env: "TECHNOCORE_AGENT_SEED"
+  nonce_state_path: "var/technocore_nonce.json"
+
+flop:
+  participation: false
+  status: "AWAITING_OFFICIAL_SESSION_API"
+  per_session_cap_test_flop: 10.0
+  daily_cap_test_flop: 50.0
+  max_jobs_per_day: 8
+  max_retries: 2
+  allowlisted_corpus_versions:
+    - "ocb-eval-v0.1"
+  emergency_stop: false
+
+flags:
+  enable_noncommercial_source: false

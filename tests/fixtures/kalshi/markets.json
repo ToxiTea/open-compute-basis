@@ -1,0 +1,54 @@
+{
+  "captured_at": "2026-09-02T12:00:00Z",
+  "discovery": "fixture",
+  "markets": [
+    {
+      "ticker": "KXH100-26SEP30-5.00",
+      "event_ticker": "KXH100-26SEP30",
+      "title": "H100 GPU-hour above $5.00 on 2026-09-30",
+      "yes_sub_title": "5.00",
+      "status": "open",
+      "yes_bid_dollars": "0.62",
+      "yes_ask_dollars": "0.66",
+      "volume_fp": "1200",
+      "close_time": "2026-09-30T20:00:00Z",
+      "updated_time": "2026-09-02T11:00:00Z"
+    },
+    {
+      "ticker": "KXH100-26SEP30-4.00",
+      "event_ticker": "KXH100-26SEP30",
+      "title": "H100 GPU-hour above $4.00 on 2026-09-30",
+      "yes_sub_title": "4.00",
+      "status": "open",
+      "yes_bid_dollars": "0.71",
+      "yes_ask_dollars": "0.75",
+      "volume_fp": "900",
+      "close_time": "2026-09-30T20:00:00Z",
+      "updated_time": "2026-09-02T11:00:00Z"
+    },
+    {
+      "ticker": "KXH100-26SEP30-6.00",
+      "event_ticker": "KXH100-26SEP30",
+      "title": "H100 GPU-hour above $6.00 on 2026-09-30",
+      "yes_sub_title": "6.00",
+      "status": "open",
+      "yes_bid_dollars": "0.40",
+      "yes_ask_dollars": "0.44",
+      "volume_fp": "800",
+      "close_time": "2026-09-30T20:00:00Z",
+      "updated_time": "2026-09-02T11:00:00Z"
+    },
+    {
+      "ticker": "KXB200-26SEP30-7.00",
+      "event_ticker": "KXB200-26SEP30",
+      "title": "B200 GPU-hour above $7.00 on 2026-09-30",
+      "yes_sub_title": "7.00",
+      "status": "open",
+      "yes_bid_dollars": "0.48",
+      "yes_ask_dollars": "0.52",
+      "volume_fp": "400",
+      "close_time": "2026-09-30T20:00:00Z",
+      "updated_time": "2026-09-02T11:00:00Z"
+    }
+  ]
+}

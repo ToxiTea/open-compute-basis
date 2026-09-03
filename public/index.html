@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Open Compute Basis — Compute Basis Board</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 2rem auto; max-width: 1100px; color: #111; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+    th, td { border-bottom: 1px solid #ccc; padding: 0.4rem 0.5rem; text-align: left; }
+    .panel { border: 1px solid #bbb; padding: 1rem 1.2rem; margin: 1.2rem 0; }
+    .muted { color: #555; }
+    code { font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>Open Compute Basis</h1>
+  <p>Experimental information service. Not financial advice, not an oracle, not a peg,
+  and not an official FLOP Labs product. Methodology 0.1.0.</p>
+  <p class="muted">Observation 2026-09-02T12:00:00Z ·
+  print hash <code>6462e6b22e9d847802d534cb368164f123f57d5ecbf0bd50e4c20142065d183e</code></p>
+
+  <div class="panel">
+    <h2>Spot / list observations</h2>
+    <p>List prices only. One-source results are observations, not a high-confidence canonical print.</p>
+    <table>
+      <thead><tr>
+        <th>Series</th><th>Status</th><th>Median of provider medians</th>
+        <th>IQR</th><th>Providers</th><th>Offers</th><th>Sources</th><th>Conf.</th><th>Flags</th>
+      </tr></thead>
+      <tbody><tr><td>OCB-H100-SXM-OD-GLOBAL</td><td>OBSERVATION</td><td>$3.890000/GPU-h</td><td>$3.327500/GPU-h – $9.392500/GPU-h</td><td>5</td><td>7</td><td>1</td><td>B</td><td>WIDE_DISPERSION, ONE_SOURCE, VARIANT_UNSPECIFIED</td></tr><tr><td>OCB-H200-SXM-OD-GLOBAL</td><td>OBSERVATION</td><td>$4.470000/GPU-h</td><td>$4.470000/GPU-h – $4.470000/GPU-h</td><td>1</td><td>1</td><td>1</td><td>C</td><td>THIN_COVERAGE, VARIANT_UNSPECIFIED</td></tr><tr><td>OCB-B200-OD-GLOBAL</td><td>OBSERVATION</td><td>$6.500000/GPU-h</td><td>$6.200000/GPU-h – $6.800000/GPU-h</td><td>3</td><td>3</td><td>1</td><td>B</td><td>ONE_SOURCE, VARIANT_UNSPECIFIED</td></tr><tr><td>OCB-A100-SXM-OD-GLOBAL</td><td>OBSERVATION</td><td>$1.990000/GPU-h</td><td>$1.895000/GPU-h – $2.045000/GPU-h</td><td>3</td><td>3</td><td>1</td><td>B</td><td>ONE_SOURCE, VARIANT_UNSPECIFIED</td></tr><tr><td>OCB-RTX3090-COMMUNITY-GLOBAL</td><td>NO_PRINT</td><td>—</td><td>— – —</td><td>0</td><td>0</td><td>0</td><td>D</td><td>STALE, NO_COVERAGE, NO_PRINT</td></tr><tr><td>OCB-RTX4090-COMMUNITY-GLOBAL</td><td>NO_PRINT</td><td>—</td><td>— – —</td><td>0</td><td>0</td><td>0</td><td>D</td><td>STALE, NO_COVERAGE, NO_PRINT</td></tr><tr><td>OCB-RTX5090-COMMUNITY-GLOBAL</td><td>NO_PRINT</td><td>—</td><td>— – —</td><td>0</td><td>0</td><td>0</td><td>D</td><td>STALE, NO_COVERAGE, NO_PRINT</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="panel">
+    <h2>Internet Backyard comparison — manually captured</h2>
+    <p>Not an OCB constituent. Never substituted for automated inputs.</p>
+    <ul><li><strong>Internet Backyard comparison — manually captured</strong> RTX4090 PCIE $0.790000/GPU-h on 2026-09-01; headline listings 68; displayed-count total 79; flags: MANUAL, COMPARISON_ONLY, COUNT_MISMATCH, CAPTURE_TIME_UNKNOWN</li></ul>
+  </div>
+
+  <div class="panel">
+    <h2>Forward-market observations (Kalshi)</h2>
+    <p>Strike ladders and market-implied median strikes. Not a forward price.</p>
+    <ul><li>B200 expiry 2026-09-30T20:00:00Z implied median strike $7.000000/GPU-h  (not a documented forward price)</li><li>H100 expiry 2026-09-30T20:00:00Z implied median strike $6.000000/GPU-h  (not a documented forward price)</li></ul>
+  </div>
+
+  <div class="panel">
+    <h2>FLOP testnet participation and session basis — awaiting official software/API</h2>
+    <p>Status: <code>AWAITING_OFFICIAL_SESSION_API</code></p>
+    <p>Transaction-index panel: none in v0.1 (no licensed transaction feed enabled).</p>
+  </div>
+
+  <div class="panel">
+    <h2>Simulated inference-evaluation report</h2>
+    <p>This is the workload OCB will run when an official faucet exists.
+    Simulated activity does not earn tokens.</p>
+    <pre>{
+  &quot;completed_useful_sessions&quot;: 1,
+  &quot;corpus_version&quot;: &quot;ocb-eval-v0.1&quot;,
+  &quot;note&quot;: &quot;Simulated activity does not earn tokens and is not a live faucet claim.&quot;,
+  &quot;quality_flags&quot;: [
+    &quot;SIMULATED&quot;
+  ],
+  &quot;simulated&quot;: true,
+  &quot;total_test_flop_spend&quot;: &quot;1.0&quot;,
+  &quot;validation_pass_rate&quot;: 1.0
+}</pre>
+  </div>
+
+  <div class="panel">
+    <h2>Attribution</h2>
+    <ul><li>FLOP session basis awaiting official software/API</li><li>Source: GPU Cloud Price Index — gpucloudcompare.com (CC-BY 4.0)</li><li>Internet Backyard comparison — manually captured; not an OCB constituent</li><li>Forward observations: Kalshi public Trade API (external-api.kalshi.com)</li></ul>
+    <p><a href="latest.json">latest.json</a></p>
+  </div>
+</body>
+</html>

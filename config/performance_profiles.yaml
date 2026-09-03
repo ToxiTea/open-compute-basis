@@ -1,0 +1,26 @@
+# Named conversion profiles. Do not invent comparability without one of these.
+
+h100-sxm-fp16-inference-v0.1:
+  precision: FP16
+  gpu: H100
+  interconnect: SXM
+  effective_pflop_per_second: 0.0  # unset until a cited benchmark is approved
+  throughput_basis: sustained
+  workload_class: inference
+  latency_target: null
+  utilization: null
+  software_stack: null
+  benchmark_source: null
+  status: UNSET
+  notes: >-
+    Placeholder only. Do not convert FLOP fees into USD/effective-exaFLOP
+    until a cited sustained-throughput profile is filled in.
+
+h200-sxm-fp16-inference-v0.1:
+  precision: FP16
+  gpu: H200
+  interconnect: SXM
+  effective_pflop_per_second: 0.0
+  throughput_basis: sustained
+  workload_class: inference
+  status: UNSET
