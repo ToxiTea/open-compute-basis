@@ -9,6 +9,7 @@ from pathlib import Path
 
 from . import __version__
 from .adapters.internet_backyard_manual import write_record
+from .digest import build_report
 from .flop_basis import summarize_sessions
 from .logging_utils import configure_logging, redact
 from .participation import BudgetError
@@ -48,6 +49,10 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("calculate", help="recalculate from the newest run receipts")
     sub.add_parser("verify", help="recompute the newest print from receipts")
     sub.add_parser("publish", help="rewrite public/ from the newest verified bundle")
+
+    report = sub.add_parser("report", help="operator status, activity, and TODOs (email body)")
+    report.add_argument("--observation", type=Path, help="latest.json; default public/latest.json")
+    report.add_argument("--out", type=Path, help="write markdown here")
 
     ib = sub.add_parser("internet-backyard", help="append a manual comparison record")
     ib.add_argument("action", choices=["add"])
@@ -111,6 +116,8 @@ def main(argv: list[str] | None = None) -> int:
             return _cmd_run(args)
         if args.cmd in {"collect", "calculate", "verify", "publish"}:
             return _cmd_run(argparse.Namespace(fixtures=True, live=False, fixture_dir=None, observation_time=None))
+        if args.cmd == "report":
+            return _cmd_report(args)
         if args.cmd == "internet-backyard":
             return _cmd_ib(args)
         if args.cmd == "technocore":
@@ -131,6 +138,21 @@ def _cmd_run(args: argparse.Namespace) -> int:
     )
     print(f"OCB v{__version__} print {bundle['print_hash'][:16]} status ok")
     print(f"wrote public/latest.json ({bundle.get('observation_date')})")
+    return 0
+
+
+def _cmd_report(args: argparse.Namespace) -> int:
+    settings = load_settings()
+    path = args.observation or (settings.root / "public" / "latest.json")
+    bundle = read_json(path)
+    text = build_report(bundle, settings)
+    out = args.out or (settings.root / "STATUS.txt")
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(text, encoding="utf-8")
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        sys.stdout.buffer.write(text.encode("utf-8"))
     return 0
 
 

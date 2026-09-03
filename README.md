@@ -101,7 +101,7 @@ pip install -e ".[dev]"
 ocb run --fixtures
 ```
 
-Open `public/index.html`. Tests: `pytest`. Live licensed fetch: `ocb run --live` (still no API keys).
+Open `public/index.html`. Operator checklist (status, activity, TODOs): [`STATUS.txt`](STATUS.txt). Tests: `pytest`. Live licensed fetch: `ocb run --live` (still no API keys).
 
 Code is Apache-2.0. GPU Cloud Price Index data is [CC BY 4.0](https://gpucloudcompare.com/data/). Computable’s index is CC BY-NC 4.0 and stays disabled unless noncommercial use is explicit.
 

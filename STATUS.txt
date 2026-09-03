@@ -1,0 +1,36 @@
+OCB STATUS
+Updated: 2026-09-02T12:00:00Z
+Not financial advice. Public-safe: no seeds in this file.
+
+STATUS
+  methodology     0.1.0
+  print hash      6462e6b22e9d847802d534cb368164f123f57d5ecbf0bd50e4c20142065d183e
+  technocore post False
+  flop participate False
+  flop            AWAITING_OFFICIAL_SESSION_API
+  url             https://github.com/ToxiTea/open-compute-basis
+
+ACTIVITY
+  OCB-A100-SXM-OD-GLOBAL  OBSERVATION  1.990000 USD/GPU-h  conf B  ONE_SOURCE, VARIANT_UNSPECIFIED
+  OCB-B200-OD-GLOBAL  OBSERVATION  6.500000 USD/GPU-h  conf B  ONE_SOURCE, VARIANT_UNSPECIFIED
+  OCB-H100-SXM-OD-GLOBAL  OBSERVATION  3.890000 USD/GPU-h  conf B  WIDE_DISPERSION, ONE_SOURCE, VARIANT_UNSPECIFIED
+  OCB-H200-SXM-OD-GLOBAL  OBSERVATION  4.470000 USD/GPU-h  conf C  THIN_COVERAGE, VARIANT_UNSPECIFIED
+  OCB-RTX3090-COMMUNITY-GLOBAL  NO_PRINT  - USD/GPU-h  conf D  STALE, NO_COVERAGE, NO_PRINT
+  OCB-RTX4090-COMMUNITY-GLOBAL  NO_PRINT  - USD/GPU-h  conf D  STALE, NO_COVERAGE, NO_PRINT
+  OCB-RTX5090-COMMUNITY-GLOBAL  NO_PRINT  - USD/GPU-h  conf D  STALE, NO_COVERAGE, NO_PRINT
+  internet backyard  RTX4090 0.790000/GPU-h as of 2026-09-01  MANUAL,COMPARISON_ONLY,COUNT_MISMATCH,CAPTURE_TIME_UNKNOWN
+  kalshi ladders     2
+  simulated eval     passed=True score=1.000000 (not tokens)
+
+STAY PARKED
+  Do not post to public Technocore until launch gates pass.
+  Do not set FLOP_PARTICIPATION until official FLOP Labs software is pinned.
+  Do not buy a purported pre-launch token or paste seeds anywhere.
+  Do not scrape Internet Backyard. Garage series stay NO_PRINT until a licensed feed exists.
+
+TODOS
+  [ ] Enable GitHub Pages (free on this public repo): Settings > Pages > Source = GitHub Actions.
+  [ ] Confirm owner and recovery seeds are in a password manager.
+  [ ] Watch for a second licensed constituent feed before calling any print canonical.
+  [ ] Optional: ocb run --live and skim H100 flags.
+  [x] Optional: newer Internet Backyard manual check when you next visit the site.
