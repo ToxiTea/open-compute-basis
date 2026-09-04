@@ -6,7 +6,8 @@ Open Compute Basis (OCB) is an independent, read-only observation layer for that
 
 FLOP is being designed so an agent can request a quantity of floating-point operations, a latency ceiling, and a fee in `$FLOP`. That creates a *network* price. It does not, by itself, tell a buyer whether that price is cheap or expensive in dollars. OCB is the translation layer: outside list prices, outside forward expectations, and — when official session data exists — FLOP’s realized cost, shown side by side as a **basis**.
 
-Canonical repository: https://github.com/ToxiTea/open-compute-basis
+Canonical repository: https://github.com/ToxiTea/open-compute-basis  
+Live board: https://toxitea.github.io/open-compute-basis/
 
 ---
 

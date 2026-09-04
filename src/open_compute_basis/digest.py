@@ -74,7 +74,7 @@ def _todos(
     return [
         {
             "done": pages_on,
-            "text": "Enable GitHub Pages (free on this public repo): Settings > Pages > Source = GitHub Actions.",
+            "text": "GitHub Pages is live at https://toxitea.github.io/open-compute-basis/",
         },
         {
             "done": False,

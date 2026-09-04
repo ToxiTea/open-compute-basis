@@ -4,11 +4,11 @@ Not financial advice. Public-safe: no seeds in this file.
 
 STATUS
   methodology     0.1.0
-  print hash      6462e6b22e9d847802d534cb368164f123f57d5ecbf0bd50e4c20142065d183e
+  print hash      119bf4be027f978f8702256b0a4f29a907325363e697f6b7155895105dcca0fd
   technocore post False
   flop participate False
   flop            AWAITING_OFFICIAL_SESSION_API
-  url             https://github.com/ToxiTea/open-compute-basis
+  url             https://toxitea.github.io/open-compute-basis/
 
 ACTIVITY
   OCB-A100-SXM-OD-GLOBAL  OBSERVATION  1.990000 USD/GPU-h  conf B  ONE_SOURCE, VARIANT_UNSPECIFIED
@@ -29,7 +29,7 @@ STAY PARKED
   Do not scrape Internet Backyard. Garage series stay NO_PRINT until a licensed feed exists.
 
 TODOS
-  [ ] Enable GitHub Pages (free on this public repo): Settings > Pages > Source = GitHub Actions.
+  [x] GitHub Pages is live at https://toxitea.github.io/open-compute-basis/
   [ ] Confirm owner and recovery seeds are in a password manager.
   [ ] Watch for a second licensed constituent feed before calling any print canonical.
   [ ] Optional: ocb run --live and skim H100 flags.

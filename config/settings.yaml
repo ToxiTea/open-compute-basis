@@ -1,7 +1,7 @@
 methodology_version: "0.1.0"
 project_name: "Open Compute Basis"
 project_short: "OCB"
-canonical_url: "https://github.com/ToxiTea/open-compute-basis"
+canonical_url: "https://toxitea.github.io/open-compute-basis/"
 disclaimer: >-
   Experimental information service. Not financial advice, not an oracle,
   not a peg, and not an official FLOP Labs product.
